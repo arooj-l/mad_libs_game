@@ -3,14 +3,11 @@ place = input("Enter the place: ")
 animal = input("Enter the animal: ")
 adjective = input("Enter the adjective: ")
 
-story = ("One day, NAME went to PLACE and saw a ANIMAL. "
-         "It was very ADJECTIVE! "
-         "Everyone was talking about the ANIMAL")
-
-story = story.replace("NAME", name.upper())
-story = story.replace("PLACE", place.title())
-story = story.replace("ANIMAL", animal.lower())
-story = story.replace("ADJECTIVE", adjective.lower())
+story = (
+    f"One day, {name.upper()} went to {place.title()} and saw a {animal.lower()}."
+    f"The {animal.lower()} was very {adjective.lower()}!"
+    f"Everyone was talking about that {animal.lower()}"
+)
 
 print("\n**** Your Mad Lib Story ****")
 print(story)
